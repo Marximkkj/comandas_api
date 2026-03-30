@@ -8,7 +8,7 @@ class ProdutoDB(database.Base):
     nome = Column(VARCHAR(100), nullable=False)
     valor_unitario = Column(DECIMAL(11,2), nullable=False)
     descricao = Column(VARCHAR(200), nullable=False)
-    foto = Column(BLOB, nullable=True)
+    foto = Column(BLOB(bytes), nullable=True)
 
     def __init__(self, id, nome, valor_unitario, foto, descricao):
         self.id = id
