@@ -5,7 +5,7 @@ from settings import STR_DATABASE
 from sqlalchemy.orm import Session
 
 # cria o engine do banco de dados
-engine = create_engine("sqlite:///./pastelaria.db", STR_DATABASE, echo=True)
+engine = create_engine(STR_DATABASE, echo=True)
 
 # cria a sessão do banco de dados
 Session = sessionmaker(bind=engine, autocommit=False, autoflush=True)
